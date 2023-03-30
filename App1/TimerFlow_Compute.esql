@@ -1,0 +1,12 @@
+DECLARE ns NAMESPACE 'http://ace/submodule.test.schemalib.level1/';
+
+
+CREATE COMPUTE MODULE TimerFlow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.Properties = InputProperties;
+		SET OutputRoot.Properties.MessageSet = '{SchemaLibLevel1}';
+		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns:libOneExampleOneValueOne = 'abc';
+		RETURN TRUE;
+	END;
+END MODULE;
