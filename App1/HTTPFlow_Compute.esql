@@ -1,11 +1,11 @@
-
+-- Namespace declarations are in the other ESQL file
 
 CREATE COMPUTE MODULE HTTPFlow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		SET OutputRoot.Properties = InputProperties;
 		SET OutputRoot.Properties.MessageSet = '{SchemaLibLevel1}';
-		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns:libOneExampleOneValueOne = 'app1';
+		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns1:libTwoExampleOneValueOne = 'appValueHTTP';
 		RETURN TRUE;
 	END;
 END MODULE;
