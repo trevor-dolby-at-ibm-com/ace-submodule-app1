@@ -6,6 +6,8 @@ CREATE COMPUTE MODULE HTTPFlow_Compute
 		SET OutputRoot.Properties = InputProperties;
 		SET OutputRoot.Properties.MessageSet = '{SchemaLibLevel1}';
 		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns1:libTwoExampleOneValueOne = 'appValueHTTP';
+		-- Causes validation failure; used to show UT failure
+		-- SET OutputRoot.XMLNSC.ns:libOneExampleOne.wrong = 'differentValue';
 		RETURN TRUE;
 	END;
 END MODULE;
