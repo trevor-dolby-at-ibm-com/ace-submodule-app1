@@ -1,4 +1,5 @@
-DECLARE ns NAMESPACE 'http://ace/submodule.test.schemalib.level1/';
+DECLARE ns1 NAMESPACE 'http://ace.submodule.schemalib.level2/';
+DECLARE ns NAMESPACE 'http://ace.submodule.schemalib.level1/';
 
 
 CREATE COMPUTE MODULE TimerFlow_Compute
@@ -6,7 +7,8 @@ CREATE COMPUTE MODULE TimerFlow_Compute
 	BEGIN
 		SET OutputRoot.Properties = InputProperties;
 		SET OutputRoot.Properties.MessageSet = '{SchemaLibLevel1}';
-		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns:libOneExampleOneValueOne = 'abc';
+		SET OutputRoot.XMLNSC.ns:libOneExampleOne.ns1:libTwoExampleOneValueOne = 'appValue';
+
 		RETURN TRUE;
 	END;
 END MODULE;
