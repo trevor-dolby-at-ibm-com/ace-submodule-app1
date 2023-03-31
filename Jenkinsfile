@@ -30,6 +30,27 @@ pipeline {
       }
     }
 
+    stage('EndToEnd Tests') {
+      steps {
+        sh  '''#!/bin/bash
+            # Set HOME to somewhere writable by Junit
+            export HOME=/tmp
+
+            # Clean up just in case files have been left around
+            rm -f */junit-reports/TEST*.xml
+            rm -rf $PWD/ace-server
+
+            ./build-and-run-end-to-end-tests.sh
+            '''
+
+      }
+      post {
+        always {
+            junit '**/junit-reports/TEST*.xml'
+        }
+      }
+    }
+
     stage('Next stage BAR build') {
       steps {
          sh  '''#!/bin/bash

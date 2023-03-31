@@ -43,3 +43,10 @@ jobs:
           # This shell has mqsiprofile already loaded
           echo "Running build and unit test"
           ./build-and-ut.sh
+
+      - name: End-to-end testing
+        shell: bash
+        run: |
+          # This shell has mqsiprofile already loaded
+          echo "Running end-to-end tests"
+          ./build-and-run-end-to-end-tests.sh
