@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-app1.git,main,App1"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-app1.git,main,App1_EndToEndTest"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-app1.git,main,App1_UnitTest"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-javalib-level1.git,main,JavaLibLevel1"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-schemalib-level1.git,main,SchemaLibLevel1"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-schemalib-level2.git,main,SchemaLibLevel2"/>
+<project reference="1.0,https://github.com/trevor-dolby-at-ibm-com/ace-submodule-subflowlib-level1.git,main,SubflowLibLevel1"/>
+</provider>
+</psf>
