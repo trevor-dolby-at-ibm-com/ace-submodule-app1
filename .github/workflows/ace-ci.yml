@@ -33,9 +33,9 @@ jobs:
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-        # This option causes the submodules to be pulled in
+        # This option causes the submodules to be pulled in recursively
         with:
-          submodules: 'true'
+          submodules: 'recursive'
 
       - name: Build the application and unit test it
         shell: bash
