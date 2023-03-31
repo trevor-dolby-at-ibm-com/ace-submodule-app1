@@ -40,7 +40,9 @@ pipeline {
             # Tekton pipelines don't have this issue because the application and library are unpacked
 	    # into a work directory in a container image in that pipeline, so there is no deploy to a
 	    # running server.
-            mqsipackagebar -w $PWD -a demo-application-combined.bar -y TeaSharedLibrary -k TeaRESTApplication
+	    export SHLIBS=`find */library.descriptor -exec dirname {} ";" | xargs -n1 -i{} echo -y {} | xargs echo`
+	    echo "Including libraries: $SHLIBS"
+            mqsipackagebar -w $PWD -a demo-application-combined.bar -k App1 $SHLIBS
 
             # Optional compile for XMLNSC, DFDL, and map resources. Useful as long as the target 
             # broker is the same OS, CPU, and installation including ifixes as the build system.
