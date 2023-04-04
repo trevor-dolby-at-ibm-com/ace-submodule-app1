@@ -8,6 +8,10 @@ pipeline {
     string(name: 'integrationNodePort',   defaultValue: '4414', description: 'Integration node REST API port')
     string(name: 'integrationServerName',   defaultValue: 'default', description: 'Integration server name')
   }
+  environment {
+    LICENSE = 'accept'
+  }
+
   stages {
     stage('Build and UT') {
       steps {
