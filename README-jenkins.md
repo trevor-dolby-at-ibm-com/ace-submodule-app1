@@ -62,5 +62,5 @@ C:\>curl http://localhost:7080/httpFlow
 
 ## Possible enhancements
 
-The pipeline could use a configuration file to contain the location of the integration node, which is
-currently configured using parameters in the Jenkinsfile.
+The pipeline could use a configuration file to contain the location information for the
+integration node, which is currently configured using parameters in the Jenkinsfile.
