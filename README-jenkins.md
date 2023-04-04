@@ -3,7 +3,7 @@
 Used to build the application (including the libraries) via Jenkins and then deploy them to an 
 existing integration node. Currently relies on docker on Unix platforms.
 
-![Pipeline overview](ace-submodule-jenkins-app-build.png)
+![Pipeline overview](files/ace-submodule-jenkins-app-build.png)
 
 ## Running Jenkins
 
@@ -32,11 +32,11 @@ To create the pipeline (and following the Jenkins pipeline tour instructions), a
 pipeline" should be created and pointed at the github repo. During this process, the "Advanced
 sub-modules behaviour" section is needed
 
-![jenkins-advance-submodule](ace-submodule-jenkins-advance-submodule.png)
+![jenkins-advance-submodule](files/ace-submodule-jenkins-advance-submodule.png)
 
 with the "Recursively update submodules" box selected:
 
-![jenkins-recursive-submodule](ace-submodule-jenkins-recursive-submodule.png)
+![jenkins-recursive-submodule](files/ace-submodule-jenkins-recursive-submodule.png)
 
 This causes Jenkins to clone all of the submodules required for the project before starting
 the build. Once thse options have been selected and project created, it will automatically 
