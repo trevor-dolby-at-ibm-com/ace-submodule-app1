@@ -3,6 +3,7 @@
 ACE submodule application 1, relying on several submodules providing libraries.
 
 This is the top level of a hierarchy of repositories:
+
 ![ace-submodule-example-layout](files/ace-submodule-example-layout.png)
 
 Subflow library: https://github.com/trevor-dolby-at-ibm-com/ace-submodule-subflowlib-level1
