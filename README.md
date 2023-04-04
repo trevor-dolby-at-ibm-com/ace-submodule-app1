@@ -26,7 +26,8 @@ correct XML; tests could be extended to other nodes and flows to enhance this re
 #### End-to-end tests
 
 Tests the HTTP-based flow to ensure that is creates the correct combination 
-of body and header data, validation the behavior of the libraries.
+of body and header data, validating the behavior of the libraries as well as
+the application itself.
 
 ## Local build
 
