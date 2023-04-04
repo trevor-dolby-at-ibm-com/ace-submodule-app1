@@ -2,6 +2,13 @@
 
 ACE submodule application 1, relying on several submodules providing libraries.
 
+This is the top level of a hierarchy of repositories:
+![ace-submodule-example-layout](files/ace-submodule-example-layout.png)
+
+Subflow library: https://github.com/trevor-dolby-at-ibm-com/ace-submodule-subflowlib-level1
+
+Schema library 1: https://github.com/trevor-dolby-at-ibm-com/ace-submodule-schemalib-level1
+
 Originally created for a [blog post](https://community.ibm.com/community/user/integration/blogs/trevor-dolby/2023/04/03/automated-multi-repo-app-connect-enterprise-ace-ba).
 
 ## Tests
@@ -48,6 +55,6 @@ projects able to run successfully:
 
 Deploys to a local integration node from a [Jenkins pipeline](README-jenkins.md).
 
-## GitHub Actions
+## GitHub Action
 
 Runs the build and test scripts automatically on pull requests.
