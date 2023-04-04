@@ -52,7 +52,7 @@ This should start the pipeline, which will then pull the source down, compile an
 then deploy it to the integration node.
 
 Once the pipeline has completed successfully, the application can be tested by using a browser
-or curl to access the application API endpoint at http://localhost:7800/tea/index/1 (assuming a
+or curl to access the application API endpoint at http://localhost:7080/httpFlow (assuming a
 node without MQ on the default HTTP per-server listener port), showing XML generated from the
 submodule schema libraries:
 ```
