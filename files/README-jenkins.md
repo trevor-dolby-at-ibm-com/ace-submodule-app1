@@ -12,7 +12,7 @@ Jenkins can be run from a command line (using Java11) as follows once downloaded
 java -jar jenkins.war --httpPort=8080
 ```
 See https://www.jenkins.io/doc/pipeline/tour/getting-started/ for details and download locations. Note
-that the docker plugins must be installed for the pipelin ein this repo to build successfully.
+that the docker plugins must be installed for the pipeline in this repo to build successfully.
 
 ## Getting started with the pipeline
 
@@ -29,13 +29,19 @@ as otherwise messages such as the following may appear regularly:
 ```
 
 To create the pipeline (and following the Jenkins pipeline tour instructions), a "multibranch 
-pipeline" should be created and pointed at the github repo.
+pipeline" should be created and pointed at the github repo. During this process, the "Advanced
+sub-modules behaviour" section is needed
 
+![jenkins-advance-submodule](ace-submodule-jenkins-advance-submodule.png)
 
+with the "Recursively update submodules" box selected:
 
- It will automatically discover 
-the Jenkinsfile in the root directory, allowing the pipeline to be run. The location of the 
-integration node should be changed when running the pipeline, with the following parameters
+![jenkins-recursive-submodule](ace-submodule-jenkins-recursive-submodule.png)
+
+This causes Jenkins to clone all of the submodules required for the project before starting
+the build. Once thse options have been selected and project created, it will automatically 
+discover the Jenkinsfile in the root directory, allowing the pipeline to be run. The location
+of the integration node should be changed when running the pipeline, with the following parameters
 set to appropriate values:
 
 - integrationNodeHost
@@ -47,8 +53,8 @@ then deploy it to the integration node.
 
 Once the pipeline has completed successfully, the application can be tested by using a browser
 or curl to access the application API endpoint at http://localhost:7800/tea/index/1 (assuming a
-node without MQ on the default HTTP per-server listener port), which is likely to return null
-values unless there is data in the database already:
+node without MQ on the default HTTP per-server listener port), showing XML generated from the
+submodule schema libraries:
 ```
 C:\>curl http://localhost:7080/httpFlow
 <NS1:libOneExampleOne xmlns:NS1="http://ace.submodule.schemalib.level1/"><NS2:libTwoExampleOneValueOne xmlns:NS2="http://ace.submodule.schemalib.level2/">appValueHTTP</NS2:libTwoExampleOneValueOne></NS1:libOneExampleOne>
@@ -57,4 +63,4 @@ C:\>curl http://localhost:7080/httpFlow
 ## Possible enhancements
 
 The pipeline could use a configuration file to contain the location of the integration node, which is
-currently configured using parameters for the pipeline itself.
+currently configured using parameters in the Jenkinsfile.
