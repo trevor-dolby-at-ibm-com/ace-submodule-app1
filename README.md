@@ -22,12 +22,15 @@ of body and header data, validation the behavior of the libraries.
 
 ## Local build
 
+Clone and build as follows:
 ```
 git clone --recursive git@github.com:trevor-dolby-at-ibm-com/ace-submodule-app1.git
 cd ace-submodule-app1
 ./build-and-ut.sh
 ./build-and-run-end-to-end-tests.sh
 ```
+
+Update submodules with `git submodule update --remote --merge --recursive`
 
 ## Toolkit
 
