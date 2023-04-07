@@ -16,9 +16,10 @@ that the docker plugins must be installed for the pipeline in this repo to build
 
 ## Getting started with the pipeline
 
-This repo relies on having the `ace-minimal` docker container image already built, using
+This repo by default on having the `ace-minimal` docker container image already built, using
 files and instructions from https://github.com/trevor-dolby-at-ibm-com/ace-docker/tree/main/experimental
-to achieve this.
+to achieve this. There is also a "no-docker" variant that expects ACE to be installed on the
+Jenkins system, which can be useful for single-node prototype testing.
 
 The pipeline can be constructed from the main repositories without forking them, but it may
 be a good idea to change "GitHub API usage" under "Configure System" in the Jenkins settings
@@ -39,9 +40,13 @@ with the "Recursively update submodules" box selected:
 ![jenkins-recursive-submodule](files/ace-submodule-jenkins-recursive-submodule.png)
 
 This causes Jenkins to clone all of the submodules required for the project before starting
-the build. Once thse options have been selected and project created, it will automatically 
-discover the Jenkinsfile in the root directory, allowing the pipeline to be run. The location
-of the integration node should be changed when running the pipeline, with the following parameters
+the build. If the "no-docker" variant is being used, then the "Script Path" setting should
+be set to `Jenkinsfile.no-docker`:
+![jenkins-no-docker](files/ace-submodule-jenkins-no-docker.png)
+
+Once thse options have been selected and project created, it will automatically discover the 
+Jenkinsfile in the root directory, allowing the pipeline to be run. The location of the 
+integration node should be changed when running the pipeline, with the following parameters
 set to appropriate values:
 
 - integrationNodeHost
