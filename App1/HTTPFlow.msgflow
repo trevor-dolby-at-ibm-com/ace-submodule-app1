@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmValidate.msgnode="ComIbmValidate.msgnode" xmlns:ComIbmWSInput.msgnode="ComIbmWSInput.msgnode" xmlns:ComIbmWSReply.msgnode="ComIbmWSReply.msgnode" xmlns:SubflowLibLevel1_AddHTTPHeader.subflow="SubflowLibLevel1/AddHTTPHeader.subflow" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"
     nsURI="HTTPFlow.msgflow" nsPrefix="HTTPFlow.msgflow">
-  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="SQUARE">
     <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
     <translation xmi:type="utility:TranslatableString" key="HTTPFlow" bundleName="HTTPFlow" pluginId="App1"/>
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/App1/icons/full/obj16/HTTPFlow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/App1/icons/full/obj30/HTTPFlow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="27,224" URLSpecifier="/httpFlow">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="22,54" URLSpecifier="/httpFlow">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="909,226">
+      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="458,55">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="233,221" computeExpression="esql://routine/#HTTPFlow_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="128,50" computeExpression="esql://routine/#HTTPFlow_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="SubflowLibLevel1_AddHTTPHeader.subflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="460,221">
+      <nodes xmi:type="SubflowLibLevel1_AddHTTPHeader.subflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="223,51">
         <translation xmi:type="utility:ConstantString" string="AddHTTPHeader"/>
       </nodes>
-      <nodes xmi:type="ComIbmValidate.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="671,221" domain="XMLNSC" checkDomain="true" set="{SchemaLibLevel1}" checkSet="true" validateMaster="contentAndValue">
+      <nodes xmi:type="ComIbmValidate.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="346,51" domain="XMLNSC" checkDomain="true" set="{SchemaLibLevel1}" checkSet="true" validateMaster="contentAndValue">
         <translation xmi:type="utility:ConstantString" string="Validate"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

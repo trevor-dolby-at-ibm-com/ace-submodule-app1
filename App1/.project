@@ -5,6 +5,7 @@
 	<projects>
 		<project>SchemaLibLevel1</project>
 		<project>SubflowLibLevel1</project>
+		<project>App1Java</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
